@@ -1,0 +1,64 @@
+// Place your key bindings in this file to override the defaults
+[
+// START ctrl+r redefines
+ // run statement, in R files
+ // in console, .R files
+  {
+    "key": "ctrl+r",
+    "command": "workbench.action.positronConsole.executeCode",
+    "when": "editorTextFocus && editorLangId == 'r'"
+  },  
+  {
+    "key": "ctrl+enter",
+    "command": "-workbench.action.positronConsole.executeCode",
+    "when": "editorTextFocus && editorLangId == 'r'"
+  },
+  // in r code in .qmd files, SOURCE mode
+{
+  "key": "ctrl+r",
+  "command": "quarto.runCurrent",
+  "when": "editorTextFocus && !findInputFocussed && !replaceInputFocussed && editorLangId == 'quarto'"
+},
+{
+  "key": "ctrl+enter",
+  "command": "-quarto.runCurrent",
+  "when": "editorTextFocus && !findInputFocussed && !replaceInputFocussed && editorLangId == 'quarto'"
+},
+// in r code in .qmd files, VISUAL mode - ATTEMPTS SO FAR HAVE FAILED but this is ok with a selection
+{
+  "key": "ctrl+r",
+  "command": "quarto.runCurrent",
+  "when": "activeCustomEditorId == 'quarto.visualEditor'"
+},
+{
+  "key": "ctrl+enter",
+  "command": "-quarto.runCurrent",
+  "when": "activeCustomEditorId == 'quarto.visualEditor'"
+},
+// END ctrl+r redefines
+
+
+// START ctrl+d redefines
+{
+  "key": "ctrl+d",
+  "command": "quarto.runSelection",
+  "when": "editorTextFocus && !findInputFocussed && !replaceInputFocussed && editorLangId == 'quarto'"
+},
+{
+  "key": "alt+enter",
+  "command": "-quarto.runSelection",
+  "when": "editorTextFocus && !findInputFocussed && !replaceInputFocussed && editorLangId == 'quarto'"
+} //,
+// visual mode does not seem to work
+// {
+//   "key": "ctrl+d",
+//   "command": "quarto.runSelection",
+//   "when": "activeCustomEditorId == 'quarto.visualEditor'"
+// },
+// {
+//   "key": "alt+enter",
+//   "command": "-quarto.runSelection",
+//   "when": "activeCustomEditorId == 'quarto.visualEditor'"
+// }
+// END ctrl+d redefines
+]
