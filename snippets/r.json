@@ -16,13 +16,11 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
-
   "Quarto Label": {
     "prefix": "qlab",
     "body": [
       "#| label: ${1:your-label}"
     ],
-    "description": "Insert a Quarto label"
+    "description": "Insert a Quarto label in an r chunk"
   }
-
 }
