@@ -16,6 +16,16 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
-
+  "Quarto stop chunk": {
+    "prefix": "qstop",
+    "body": [
+      "```{r}",
+	  "#| echo: false",
+	  "knitr::knit_exit()",
+	  "```",
+	  ""
+    ],
+    "description": "Insert an r chunk that will stop execution of a quarto file"
+  }	
 
 }
