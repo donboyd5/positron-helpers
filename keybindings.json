@@ -41,24 +41,23 @@
 // START ctrl+d redefines
 {
   "key": "ctrl+d",
-  "command": "quarto.runSelection",
+  "command": "quarto.runCurrentAdvance",
   "when": "editorTextFocus && !findInputFocussed && !replaceInputFocussed && editorLangId == 'quarto'"
 },
 {
-  "key": "alt+enter",
-  "command": "-quarto.runSelection",
+  "key": "shift+enter",
+  "command": "-quarto.runCurrentAdvance",
   "when": "editorTextFocus && !findInputFocussed && !replaceInputFocussed && editorLangId == 'quarto'"
-} //,
-// visual mode does not seem to work
-// {
-//   "key": "ctrl+d",
-//   "command": "quarto.runSelection",
-//   "when": "activeCustomEditorId == 'quarto.visualEditor'"
-// },
-// {
-//   "key": "alt+enter",
-//   "command": "-quarto.runSelection",
-//   "when": "activeCustomEditorId == 'quarto.visualEditor'"
-// }
+},
+{
+  "key": "ctrl+d",
+  "command": "quarto.runCurrentAdvance",
+  "when": "activeCustomEditorId == 'quarto.visualEditor'"
+},
+{
+  "key": "shift+enter",
+  "command": "-quarto.runCurrentAdvance",
+  "when": "activeCustomEditorId == 'quarto.visualEditor'"
+}
 // END ctrl+d redefines
 ]
