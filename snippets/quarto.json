@@ -27,5 +27,4 @@
     ],
     "description": "Insert an r chunk that will stop execution of a quarto file"
   }	
-
 }
