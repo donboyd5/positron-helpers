@@ -1,5 +1,13 @@
-# Test quarto snippets here
+# Test quarto and r-chunk snippets here
+
+```{r}
+#| echo: false
+knitr::knit_exit()
+```
 
 
+```{r}
+
+```
 
 
