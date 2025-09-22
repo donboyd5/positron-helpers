@@ -1,6 +1,8 @@
 {
     // Where this file goes:
     //   Windows: C:\Users\donbo\AppData\Roaming\Positron\User\snippets\
+	//            %APPDATA%/Positron/User/snippets
+	//           Note:  %APPDATA% brings us to C:\Users\donbo\AppData\Roaming
     //   linux: 
     
 	// Place your snippets for quarto here. Each snippet is defined under a snippet name and has a prefix, body and 
