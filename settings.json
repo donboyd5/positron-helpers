@@ -1,94 +1,99 @@
 {
-    "[quarto]": {
-        // use ctrl+k ctrl+f to format R chunks in quarto files
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "quarto.quarto"
-    },
-    "[r]": {
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "Posit.air-vscode"
-    },
-    "[python]": {
-        // "editor.defaultFormatter": "ms-python.black-formatter",
-        "editor.formatOnSave": true
-    },    
-    "workbench.colorTheme": "Selene Selenized Light",
-    // "workbench.editorAssociations": {
-    //     "0": {
-    //         "*.pdf": "pdf.preview"
-    //     },
-    //     "1": {
-    //         "*.xls*": "external"
-    //     },
-    //     "*.copilotmd": "vscode.markdown.preview.editor",
-    //     "*.xls": "default"
-    // },
-    "workbench.editorAssociations": [
+  // Language-specific overrides
+  // use ctrl+k ctrl+f to format R chunks in quarto files
+  "[quarto]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "quarto.quarto"
+  },
+  "[r]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "Posit.air-vscode"
+  },
+  "[python]": {
+    "editor.formatOnSave": true
+    // "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "[yaml]": {
+    "diffEditor.ignoreTrimWhitespace": false
+  },
+
+  // File associations
+  "files.associations": {
+    "*.json": "jsonc",
+    "renv.lock": "json"
+  },
+
+  // Workbench and UI
+  "workbench.colorTheme": "Selene Selenized Light",
+  "workbench.editorAssociations": [
     {"*.pdf": "pdf.preview"},
-    { "filenamePattern": "**/*.xls",  "viewType": "external" },
-    { "filenamePattern": "**/*.xlsx", "viewType": "external" },
-    { "filenamePattern": "**/*.xlsm", "viewType": "external" },
-    { "filenamePattern": "**/*.xlsb", "viewType": "external" }
-    ],
-    //"files.defaultLanguage": "plaintext",
-    // {
-    //     "r.lsp.debug": true,
-        // "r.lsp.diagnostics": true,
-        // "r.rterm.option": ["--no-save", "--no-restore"]
-    //   } 
-    "git.confirmSync": false,
-    "files.autoSave": "afterDelay",
-    "window.zoomLevel": 0.5,
-    "positron.r.extraArguments": [
-        ""
-    ],
-    "workbench.settings.applyToAllProfiles": [
-        "positron.r.interpreters.default"
-    ],
-    "positron.r.interpreters.default": "C:/Program Files/R/R-4.5.1/bin/R",
-    "editor.minimap.enabled": true,
-    "csv-preview.capitalizeHeaders": false,
-    "positron.assistant.enable": true,
-    "git.openRepositoryInParentFolders": "never",
-    // do NOT add  "*.vdoc.*.r": "plaintext" to files.associations to catch virtual R docs; it causes problems with how shortcuts work in qmd files and may cause other problems
-    // look for other ways to solve the 1,000+ problems found in qmd files if we do not use this line
-    "files.associations": {
-        "renv.lock": "json"
-    },
-    "gitlens.views.scm.grouped.views": {
-        "commits": true,
-        "branches": true,
-        "remotes": true,
-        "stashes": true,
-        "tags": true,
-        "worktrees": true,
-        "contributors": true,
-        "fileHistory": true,
-        "repositories": true,
-        "searchAndCompare": true,
-        "launchpad": true
-    },
-    "update.positron.channel": "dailies",
-    // maybe good immediately above BAD in here above
-    "git.scanRepositories": [
-        "\"git.scanRepositories\": [\"e:/R_projects/Reason/pendata\"]"
-    ],
-    "gitlens.views.branches.showRemoteBranches": true,
-    "githubPullRequests.createOnPublishBranch": "never",
-    "gitlens.views.branches.branches.layout": "list",
-    "vscode-office.openOutline": true,
-    "editor.fontSize": 14,
-    "terminal.integrated.fontSize": 13,
-    // "window.zoomLevel": 0.75,
-    "remote.autoForwardPortsSource": "hybrid",
-    "diffEditor.hideUnchangedRegions.enabled": true,
-    "[yaml]": {
-        "diffEditor.ignoreTrimWhitespace": false
-    },
-    "diffEditor.renderSideBySide": true,
-    "gitlens.graph.minimap.enabled": false,
-    "git-graph.commitDetailsView.location": "Docked to Bottom",
-    "python.analysis.extraPaths": [
-          "/home/donboyd5/Documents/python_projects/Tax-Calculator"
-    ]
+    {"filenamePattern": "**/*.xls",  "viewType": "external"},
+    {"filenamePattern": "**/*.xlsx", "viewType": "external"},
+    {"filenamePattern": "**/*.xlsm", "viewType": "external"},
+    {"filenamePattern": "**/*.xlsb", "viewType": "external"}
+  ],
+  "window.zoomLevel": 0.5,
+  // "window.zoomLevel": 0.75, // Optionally keep this as alternate
+
+  // Editor settings
+  "editor.minimap.enabled": true,
+  "editor.fontSize": 14,
+
+  // Terminal settings
+  "terminal.integrated.fontSize": 13,
+
+  // File handling
+  "files.autoSave": "afterDelay",
+
+  // Positron/R specific
+  "positron.r.extraArguments": [""],
+  "positron.r.interpreters.default": "C:/Program Files/R/R-4.5.1/bin/R",
+  "workbench.settings.applyToAllProfiles": [
+    "positron.r.interpreters.default"
+  ],
+
+  // Git settings
+  "git.confirmSync": false,
+  "git.openRepositoryInParentFolders": "never",
+  "git.scanRepositories": [
+    "e:/R_projects/Reason/pendata"
+  ],
+
+  // GitLens & GitHub settings
+  "gitlens.views.scm.grouped.views": {
+    "commits": true,
+    "branches": true,
+    "remotes": true,
+    "stashes": true,
+    "tags": true,
+    "worktrees": true,
+    "contributors": true,
+    "fileHistory": true,
+    "repositories": true,
+    "searchAndCompare": true,
+    "launchpad": true
+  },
+  "gitlens.views.branches.showRemoteBranches": true,
+  "gitlens.views.branches.branches.layout": "list",
+  "gitlens.graph.minimap.enabled": false,
+  "githubPullRequests.createOnPublishBranch": "never",
+
+  // CSV
+  "csv-preview.capitalizeHeaders": false,
+
+  // Positron Assistant
+  "positron.assistant.enable": true,
+
+  // Office extension
+  "vscode-office.openOutline": true,
+
+  // Diff Editor
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "diffEditor.renderSideBySide": true,
+
+  // Remote
+  "remote.autoForwardPortsSource": "hybrid",
+
+  // Positron channel
+  "update.positron.channel": "dailies"
 }
