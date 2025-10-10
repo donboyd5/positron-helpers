@@ -58,6 +58,11 @@
   "key": "shift+enter",
   "command": "-quarto.runCurrentAdvance",
   "when": "activeCustomEditorId == 'quarto.visualEditor'"
-}
+},
 // END ctrl+d redefines
+{
+  "key": "tab",
+  "command": "tab",
+  "when": "editorTextFocus && editorLangId == 'quarto'"
+}
 ]
