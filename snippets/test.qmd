@@ -1,3 +1,11 @@
+---
+editor_options: 
+  chunk_output_type: console
+editor:
+  markdown:
+    canonical: true
+---
+
 # Test quarto and r-chunk snippets here
 
 ```{r}
