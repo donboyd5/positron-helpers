@@ -26,5 +26,19 @@
 	  ""
     ],
     "description": "Insert an r chunk that will stop execution of a quarto file"
-  }	
+  },
+  "Quarto editor options": {
+    "prefix": "qed",
+    "body": [
+      "---",
+	  "editor_options: ",
+	  "  chunk_output_type: console",
+	  "editor:",
+	  "  markdown:",
+	  "    canonical: true",
+	  "---",
+	  ""
+    ],
+    "description": "Insert frequently used editor options in qmd files"
+  }
 }
